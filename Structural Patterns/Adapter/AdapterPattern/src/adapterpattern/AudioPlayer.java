@@ -22,5 +22,4 @@ public class AudioPlayer implements MediaPlayer {
               mediaAdapter.play(filetype,filename);
         }
     }
-    
 }
