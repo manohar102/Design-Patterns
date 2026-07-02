@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package abstactfactory;
 
 /**
@@ -11,12 +6,13 @@ package abstactfactory;
  */
 public class ModernFurnitureFactory implements FurnitutureFactory {
     @Override
-    public Chair createChair(){
+    public Chair createChair() {
         return new ModernChair();
     }
+
     @Override
-    public Sofa createSofa(){
+    public Sofa createSofa() {
         return new ModeranSOfa();
     }
-    
+
 }

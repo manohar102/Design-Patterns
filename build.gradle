@@ -1,0 +1,56 @@
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'application'
+
+    repositories {
+        mavenCentral()
+    }
+
+    // Map source directories directly to 'src' to avoid relocating files to 'src/main/java'
+    sourceSets {
+        main {
+            java {
+                srcDirs = ['src']
+            }
+        }
+    }
+
+    java {
+        toolchain {
+            languageVersion = JavaLanguageVersion.of(17)
+        }
+    }
+
+    // Mapping project name to its respective main execution class
+    def mainClassMap = [
+        'AbstactFactory': 'abstactfactory.AbstactFactory',
+        'BuilderPattern': 'builderpattern.BuilderPattern',
+        'FactoryMethod': 'factorymethod.FactoryMethod',
+        'PrototypePattern': 'prototypepattern.PrototypePattern',
+        'SingletonDesign': 'singletondesign.SingletonDesign',
+        
+        'AdapterPattern': 'adapterpattern.AdapterPattern',
+        'BridgePattern': 'bridgepattern.BridgePattern',
+        'CompositePattern': 'compositepattern.CompositePattern',
+        'DecoratorPattern': 'decoratorpattern.DecoratorPattern',
+        'FacadePattern': 'facadepattern.FacadePattern',
+        'FlyweightPattern': 'flyweightpattern.FlyweightPattern',
+        'ProxyPattern': 'proxypattern.ProxyPattern',
+        
+        'ChainOfResponsibilityPattern': 'chainofresponsibilitypattern.ChainOfResponsibilityPattern',
+        'CommandPattern': 'commandpattern.CommandPattern',
+        'InterpreterPattern': 'interpreterpattern.InterpreterPattern',
+        'IteratorPattern': 'iteratorpattern.IteratorPattern',
+        'MediatorPattern': 'mediatorpattern.MediatorPattern',
+        'MementoPattern': 'mementopattern.MementoPattern',
+        'ObserverPattern': 'observerpattern.ObserverPattern',
+        'StatePattern': 'statepattern.StatePattern',
+        'StrategyPattern': 'strategypattern.StrategyPattern',
+        'TemplateMethodPattern': 'templatemethodpattern.TemplateMethodPattern',
+        'VisitorPattern': 'visitorpattern.VisitorPattern'
+    ]
+
+    application {
+        mainClass = mainClassMap[project.name]
+    }
+}

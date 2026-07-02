@@ -1,0 +1,35 @@
+rootProject.name = 'Design-Patterns'
+
+// Subprojects mapped to their physical paths in the repository directory structure
+def projectMap = [
+    ':AbstactFactory': 'Creational Patterns/Abstract Factory/AbstactFactory',
+    ':BuilderPattern': 'Creational Patterns/Builder Pattern/BuilderPattern',
+    ':FactoryMethod': 'Creational Patterns/Factory Method/FactoryMethod',
+    ':PrototypePattern': 'Creational Patterns/Prototype Pattern/PrototypePattern',
+    ':SingletonDesign': 'Creational Patterns/Singleton Design/SingletonDesign',
+    
+    ':AdapterPattern': 'Structural Patterns/Adapter/AdapterPattern',
+    ':BridgePattern': 'Structural Patterns/Bridge/BridgePattern',
+    ':CompositePattern': 'Structural Patterns/Composite/CompositePattern',
+    ':DecoratorPattern': 'Structural Patterns/Decorator/DecoratorPattern',
+    ':FacadePattern': 'Structural Patterns/Facade/FacadePattern',
+    ':FlyweightPattern': 'Structural Patterns/Flyweight/FlyweightPattern',
+    ':ProxyPattern': 'Structural Patterns/Proxy/ProxyPattern',
+    
+    ':ChainOfResponsibilityPattern': 'Behavioral Patterns/Chain of Responsibility/ChainOfResponsibilityPattern',
+    ':CommandPattern': 'Behavioral Patterns/Command/CommandPattern',
+    ':InterpreterPattern': 'Behavioral Patterns/Interpreter/InterpreterPattern',
+    ':IteratorPattern': 'Behavioral Patterns/Iterator/IteratorPattern',
+    ':MediatorPattern': 'Behavioral Patterns/Mediator/MediatorPattern',
+    ':MementoPattern': 'Behavioral Patterns/Memento/MementoPattern',
+    ':ObserverPattern': 'Behavioral Patterns/Observer/ObserverPattern',
+    ':StatePattern': 'Behavioral Patterns/State/StatePattern',
+    ':StrategyPattern': 'Behavioral Patterns/Strategy/StrategyPattern',
+    ':TemplateMethodPattern': 'Behavioral Patterns/Template Method/TemplateMethodPattern',
+    ':VisitorPattern': 'Behavioral Patterns/Visitor/VisitorPattern'
+]
+
+projectMap.each { name, path ->
+    include name
+    project(name).projectDir = file(path)
+}
