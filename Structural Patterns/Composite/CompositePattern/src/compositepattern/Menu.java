@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package compositepattern;
 
 import java.util.ArrayList;
@@ -19,31 +15,38 @@ public class Menu extends MenuComponent {
     
     public Menu(String name,String description){
         this.name= name;
-        this.description = description;
+        this.descriptio
+
+    public void add(MenuComp onent menuComponent ){
+        menuCompo nents.add(menuComponent);
     }
-    public void add(MenuComponent menuComponent){
-        menuComponents.add(menuComponent);
+    p
+
+        menuComponents.remove(menuComponent); 
     }
-    public void remove(MenuComponent menuComponent){
-        menuComponents.remove(menuComponent);
+    p
+
+       return (MenuComponent)menuComponents.get(i); 
     }
-    public MenuComponent getItem(int i){
-       return (MenuComponent)menuComponents.get(i);
+    p
+
+        return name; 
+         
+    p
+
+        return description; 
     }
-    public String getName(){
-        return name;
-    }
-    public String getDescription(){
-        return description;
-    }
-    public void print(){
-        System.out.println("\n"+getName());
+    p
+
+        System.out.println("\n"+ge tName());
         System.out.println(", "+getDescription());
-        System.out.println("-------------------");
-        Iterator iterator = menuComponents.iterator();
-        while(iterator.hasNext()){
-            MenuComponent menuComponent = (MenuComponent) iterator.next();
+     
+
+        Iterator iterat or = menuComponents.iterator();
+        while(iterator.hasNext( ) ){
+            MenuComponent menuC o mponent = (MenuComponent) iterator.next();
             menuComponent.print();
         }
-    }    
+    }      
 }
+

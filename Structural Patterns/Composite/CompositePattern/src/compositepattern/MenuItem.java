@@ -1,9 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package compositepattern;
+
 /**
  *
  * @author Manohar Krishna
@@ -13,30 +10,36 @@ public class MenuItem extends MenuComponent {
     String description;
     double price;
     boolean vegetarian;
-    MenuItem(String name,String description,boolean vegetarian,double price){
+
+    MenuItem(String name, String description, boolean vegetarian, double price) {
         this.name = name;
         this.description = description;
         this.price = price;
         this.vegetarian = vegetarian;
     }
-    public String getName(){
+
+    public String getName() {
         return name;
     }
-    public String getDescription(){
+
+    public String getDescription() {
         return description;
     }
-    public double getPrice(){
+
+    public double getPrice() {
         return price;
     }
-    public boolean isVegetarian(){
+
+    public boolean isVegetarian() {
         return vegetarian;
     }
-    public void print(){
+
+    public void print() {
         System.out.println(name);
-        if(vegetarian){
+        if (vegetarian) {
             System.out.println("(V)");
         }
-        System.out.println(", "+getPrice());
-        System.out.println("       --"+getDescription());
+        System.out.println(", " + getPrice());
+        System.out.println("       --" + getDescription());
     }
 }

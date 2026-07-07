@@ -11,5 +11,6 @@ package abstactfactory;
  */
 public interface FurnitutureFactory {
     Chair createChair();
+
     Sofa createSofa();
 }
